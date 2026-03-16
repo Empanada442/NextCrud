@@ -7,5 +7,5 @@ export default function categorias (){
                 <li>Categoria 1</li>
             </ul>
         </div>
-    )
+    );
 }

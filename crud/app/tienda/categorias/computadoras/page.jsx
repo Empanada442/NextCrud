@@ -7,5 +7,5 @@ export default function computadora (){
                 <li>computadora 1</li>
             </ul>
         </div>
-    )
+    );
 }

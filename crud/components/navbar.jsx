@@ -1,9 +1,11 @@
 import Link from "next/link"
+import "./Navbar.css"
 
 
 export default function Navbar () {
     return(
     <nav>
+      <h1>CRUDNEXT</h1>
     <ul>
       <li>
         <Link href="/">Home</Link>

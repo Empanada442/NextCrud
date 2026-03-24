@@ -19,6 +19,13 @@ npx prisma studio
 
 nos da nuestro modulo para ver la base de datos en  http://localhost:5555/ 
 
+como iniciar en prisma https://www.prisma.io/docs/prisma-orm/quickstart/prisma-postgres
+
+npx prisma
+npx prisma migrate dev --name init
+npx prisma generate
+npx tsx script.ts
+
 ## Contenido del repositiorio 
 
 

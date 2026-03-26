@@ -15,15 +15,21 @@ export async function GET(request, { params }) {
 }
 
 export async function PUT(request, { params }) {
-    const { id } = params;
+    const { id } = await params;
     const body = await request.json();
 
     const updatedTask = await prisma.task.update({
         where: { id: Number(id) },
-        data: body,
+        data: {
+            title: body.title,
+            description: body.description,
+            completed: body.completed,
+            user: {
+                connect: { id: body.userId }
+            }
+        },
     });
 
-    console.log(updatedTask);
     return NextResponse.json({
         message: "Task updated successfully",
         task: updatedTask,

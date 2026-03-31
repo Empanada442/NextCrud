@@ -4,7 +4,11 @@ import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
 export  async function GET() {
-  const tasks =  await prisma.task.findMany()
+  const tasks = await prisma.task.findMany({
+    orderBy: {
+      createdAt: "asc",
+    },
+  });
   console.log(tasks)
 
 

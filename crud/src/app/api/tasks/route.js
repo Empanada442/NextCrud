@@ -8,9 +8,7 @@ export  async function GET() {
   console.log(tasks)
 
 
-  return NextResponse.json({
-    message: "Tareas obtenidas correctamente",
-  });
+  return NextResponse.json(tasks);
 }
 
 export async function POST(request) {
